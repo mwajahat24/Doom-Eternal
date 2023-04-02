@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Orbitron:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/80afa6ed2d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/images/header/doomfavicon.ico"
+    />
+    <title>Doom Eternal</title>
+  </head>
+  <body>
+    <div class="main_container">
+      <div class="container_nav">
+        <div class="nav_logo">
+          <img class="logo_img" src="assets/images/header/logo.png" alt="" />
+        </div>
+        <div class="hamburgermenu">
+          <div class="boxes"></div>
+          <div class="boxes"></div>
+          <div class="boxes"></div>
+          <div class="nav_navlinks">
+            <a href="#" class="navlinks_navitems">Trailer</a>
+            <a href="#" class="navlinks_navitems">Pre Order</a>
+            <a href="#" class="navlinks_navitems">Gameplay</a>
+            <a href="#" class="navlinks_navitems">Activity</a>
+            <a href="#" class="navlinks_navitems">Store</a>
+          </div>
+        </div>
+        <div class="nav_navlinks">
+          <a href="#" class="navlinks_navitems">Trailer</a>
+          <a href="#" class="navlinks_navitems">Pre Order</a>
+          <a href="#" class="navlinks_navitems">Gameplay</a>
+          <a href="#" class="navlinks_navitems">Activity</a>
+          <a href="#" class="navlinks_navitems">Store</a>
+        </div>
+      </div>
+      <header>
+        <div class="header_container">
+          <div class="container_hero">
+            <img
+              class="hero_img"
+              src="assets/images/header/herosection_title.jpg"
+              alt="hero_img"
+            />
+            <div id="vidcontainer" class="buttonscontainer">
+              <button onclick="displayvideo()" class="accolades">
+                <i class="fa-solid fa-play playicon"></i>
+                accolades trailer
+                <iframe
+                  id="tvid1"
+                  class="trailervid"
+                  width="853"
+                  height="505"
+                  src="https://www.youtube.com/embed/_J2YcaVqjCQ"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                >
+                </iframe>
+                <button onclick="closevid()" id="cbutton1" class="close">
+                  Close
+                </button>
+                <script>
+                  var trailervid = document.getElementById("tvid1");
+                  var closebutton = document.getElementById("cbutton1");
+                  function displayvideo() {
+                    trailervid.style.display = "inline-block";
+                    closebutton.style.display = "block";
+                  }
+                  function closevid() {
+                    let containerElement =
+                      document.getElementById("vidcontainer");
+                    let iframe_tag = containerElement.querySelector("iframe");
+                    let video_tag = containerElement.querySelector("video");
+                    if (iframe_tag) {
+                      let iframeSrc = iframe_tag.src;
+                      iframe_tag.src = iframeSrc;
+                    }
+                    if (video_tag) {
+                      video_tag.pause();
+                    }
+                    trailervid.style.display = "none";
+                    closebutton.style.display = "none";
+                  }
+                </script>
+              </button>
+              <button class="buynow">buy now</button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="empty"></div>
+      <section class="gameplay">
+        <div class="container">
+          <div class="boxes1 imagebox picbox1"></div>
+          <div class="boxes1 textbox">
+            <div class="title">Slaughter Demons</div>
+            <div class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+              obcaecati praesentium deserunt necessitatibus minima aut.
+            </div>
+            <div class="button">
+              <button class="learnmore">Learn More</button>
+            </div>
+          </div>
+          <div class="boxes1 textbox">
+            <div class="title">Battle Kahn Maker</div>
+            <div class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+              obcaecati praesentium deserunt necessitatibus minima aut.
+            </div>
+            <div class="button">
+              <button class="learnmore">Learn More</button>
+            </div>
+          </div>
+          <div class="boxes1 imagebox picbox2"></div>
+          <div class="boxes1 imagebox picbox3"></div>
+          <div class="boxes1 textbox">
+            <div class="title">New Enemies</div>
+            <div class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+              obcaecati praesentium deserunt necessitatibus minima aut.
+            </div>
+            <div class="button">
+              <button class="learnmore">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="ourservices">
+        <div class="services">Weopons</div>
+        <div class="container2">
+          <div class="boxes2">
+            <div class="logo">
+              <img
+                class="grid_img"
+                src="assets/images/header/eternal-slide-1.webp"
+                alt=""
+              />
+              <!-- <img
+              src="animat-essential/diamond/animat-diamond-color.gif"
+              alt="logopic"
+            /> -->
+            </div>
+            <div class="title2">Ballista</div>
+            <div class="description2">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse,
+              iusto corrupti suscipit illo numquam deserunt! Hic ipsam adipisci
+              enim quod!
+            </div>
+          </div>
+          <div class="boxes2">
+            <div class="logo">
+              <img
+                class="grid_img"
+                src="assets/images/header/eternal-slide-2.webp"
+                alt=""
+              />
+              <!-- <img src="animat-essential/pencil/animat-pencil-color.gif" alt="" /> -->
+            </div>
+            <div class="title2">Plasma Rifle</div>
+            <div class="description2">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse,
+              iusto corrupti suscipit illo numquam deserunt! Hic ipsam adipisci
+              enim quod!
+            </div>
+          </div>
+          <div class="boxes2">
+            <div class="logo">
+              <img
+                class="grid_img"
+                src="assets/images/header/eternal-slide-4.webp"
+                alt=""
+              />
+              <!-- <img
+              src="animat-essential/responsive/animat-responsive-color.gif"
+              alt=""
+            /> -->
+            </div>
+            <div class="title2">Chainsaw</div>
+            <div class="description2">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse,
+              iusto corrupti suscipit illo numquam deserunt! Hic ipsam adipisci
+              enim quod!
+            </div>
+          </div>
+          <div class="boxes2">
+            <div class="logo">
+              <img
+                class="grid_img"
+                src="assets/images/header/eternal-slide-3.webp"
+                alt=""
+              />
+              <!-- <img
+              src="animat-essential/lightbulb/animat-lightbulb-color.gif"
+              alt=""
+            /> -->
+            </div>
+            <div class="title2">Plasma Rifle M41</div>
+            <div class="description2">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse,
+              iusto corrupti suscipit illo numquam deserunt! Hic ipsam adipisci
+              enim quod!
+            </div>
+          </div>
+          <div class="boxes2">
+            <div class="logo">
+              <img
+                class="grid_img"
+                src="assets/images/header/eternal-slide-5.webp"
+                alt=""
+              />
+              <!-- <img
+              src="animat-essential/line-chart/animat-linechart-color.gif"
+              alt=""
+            /> -->
+            </div>
+            <div class="title2">Crucible</div>
+            <div class="description2">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse,
+              iusto corrupti suscipit illo numquam deserunt! Hic ipsam adipisci
+              enim quod!
+            </div>
+          </div>
+          <div class="boxes2">
+            <div class="logo">
+              <img
+                class="grid_img"
+                src="assets/images/header/eternal-slide-6.webp"
+                alt=""
+              />
+              <!-- <img
+              src="animat-essential/customize/animat-customize-color.gif"
+              alt=""
+            /> -->
+            </div>
+            <div class="title2">Slayer Helmet</div>
+            <div class="description2">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse,
+              iusto corrupti suscipit illo numquam deserunt! Hic ipsam adipisci
+              enim quod!
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="wrapper">
+          <div class="container3">
+            <div
+              class="container_contact container_member container_member_padding"
+            >
+              <div class="contact_title title_marginbottom">Bethesda</div>
+              <div class="contact_address component--flex member--lineheight">
+                <i class="fa-solid fa-location-dot contact_icon"></i>
+                <div class="address">575 Gateway</div>
+              </div>
+              <div class="contact_email component--flex member--lineheight">
+                <i class="fa-solid fa-envelope contact_icon"></i>
+                <div class="email">bethesda@example.com</div>
+              </div>
+              <div class="contact_phone component--flex member--lineheight">
+                <i class="fa-solid fa-phone contact_icon"></i>
+                <div class="phone">+359 481 9563</div>
+              </div>
+            </div>
+            <div
+              class="container_aboutus container_member container_member_padding"
+            >
+              <div
+                class="aboutus_title container_contact--semibold title_marginbottom"
+              >
+                about us
+              </div>
+              <div class="aboutus_story member--lineheight">Story</div>
+              <div class="aboutus_teammembers member--lineheight">
+                Team Members
+              </div>
+              <div class="aboutus_partners member--lineheight">Partners</div>
+              <div class="aboutus_privacypolicy member--lineheight">
+                Privacy Policy
+              </div>
+              <div class="aboutus_termsandconditions member--lineheight">
+                Terms & Conditions
+              </div>
+            </div>
+            <div
+              class="container_quicklinks container_member container_member_padding"
+            >
+              <div
+                class="quicklinks_title container_contact--semibold title_marginbottom"
+              >
+                quick links
+              </div>
+              <div class="quicklinks_games member--lineheight">Games</div>
+              <div class="quicklinks_blog member--lineheight">Blog</div>
+              <div class="quicklinks_plans member--lineheight">Plans</div>
+              <div class="quicklinks_forum member--lineheight">Forum</div>
+              <div class="quicklinks_support member--lineheight">Support</div>
+            </div>
+            <div
+              class="container_socialmedia container_member container_member_padding"
+            >
+              <div
+                class="socialmedia_title container_contact--semibold title_marginbottom"
+              >
+                social media
+              </div>
+              <div class="socialmedia_subscribe member--lineheight">
+                Subscribe To Our Newsletter
+              </div>
+              <form class="emailform" action="#">
+                <input
+                  class="socialmedia_email member--lineheight"
+                  type="email"
+                  placeholder="Email*"
+                />
+                <i class="fa-solid fa-paper-plane paperplane--purple"></i>
+              </form>
+              <div class="socialmedia_followus member--lineheight">
+                Follow us on Social Media
+              </div>
+              <div class="socialmedia_icons member--lineheight">
+                <i class="fa-brands fa-facebook-square fa-xl"></i>
+                <i class="fa-brands fa-steam-square fa-xl"></i>
+                <i class="fa-brands fa-twitch fa-xl"></i>
+                <i class="fa-brands fa-youtube-square fa-xl"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
