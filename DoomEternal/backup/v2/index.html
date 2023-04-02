@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Orbitron:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/80afa6ed2d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/images/header/doomfavicon.ico"
+    />
+    <title>Doom Eternal</title>
+  </head>
+  <body>
+    <div class="main_container">
+      <div class="container_nav">
+        <div class="nav_logo">
+          <img class="logo_img" src="assets/images/header/logo.png" alt="" />
+        </div>
+        <div class="hamburgermenu">
+          <div class="boxes"></div>
+          <div class="boxes"></div>
+          <div class="boxes"></div>
+          <div class="nav_navlinks">
+            <a href="#" class="navlinks_navitems">Trailer</a>
+            <a href="#" class="navlinks_navitems">Pre Order</a>
+            <a href="#" class="navlinks_navitems">Gameplay</a>
+            <a href="#" class="navlinks_navitems">Activity</a>
+            <a href="#" class="navlinks_navitems">Store</a>
+          </div>
+        </div>
+        <div class="nav_navlinks">
+          <a href="#" class="navlinks_navitems">Trailer</a>
+          <a href="#" class="navlinks_navitems">Pre Order</a>
+          <a href="#" class="navlinks_navitems">Gameplay</a>
+          <a href="#" class="navlinks_navitems">Activity</a>
+          <a href="#" class="navlinks_navitems">Store</a>
+        </div>
+      </div>
+      <header>
+        <div class="header_container">
+          <div class="container_hero">
+            <img
+              class="hero_img"
+              src="assets/images/header/herosection_title.jpg"
+              alt="hero_img"
+            />
+            <div id="vidcontainer" class="buttonscontainer">
+              <button onclick="displayvideo()" class="accolades">
+                <i class="fa-solid fa-play playicon"></i>
+                accolades trailer
+                <iframe
+                  id="tvid1"
+                  class="trailervid"
+                  width="853"
+                  height="505"
+                  src="https://www.youtube.com/embed/_J2YcaVqjCQ"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                >
+                </iframe>
+                <button onclick="closevid()" id="cbutton1" class="close">
+                  Close
+                </button>
+                <script>
+                  var trailervid = document.getElementById("tvid1");
+                  var closebutton = document.getElementById("cbutton1");
+                  function displayvideo() {
+                    trailervid.style.display = "inline-block";
+                    closebutton.style.display = "block";
+                  }
+                  function closevid() {
+                    let containerElement =
+                      document.getElementById("vidcontainer");
+                    let iframe_tag = containerElement.querySelector("iframe");
+                    let video_tag = containerElement.querySelector("video");
+                    if (iframe_tag) {
+                      let iframeSrc = iframe_tag.src;
+                      iframe_tag.src = iframeSrc;
+                    }
+                    if (video_tag) {
+                      video_tag.pause();
+                    }
+                    trailervid.style.display = "none";
+                    closebutton.style.display = "none";
+                  }
+                </script>
+              </button>
+              <button class="buynow">buy now</button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="empty"></div>
+      <section class="gameplay">
+        <div class="container">
+          <div class="boxes1 imagebox picbox1"></div>
+          <div class="boxes1 textbox">
+            <div class="title">Slaughter Demons</div>
+            <div class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+              obcaecati praesentium deserunt necessitatibus minima aut.
+            </div>
+            <div class="button">
+              <button class="learnmore">Learn More</button>
+            </div>
+          </div>
+          <div class="boxes1 textbox">
+            <div class="title">Battle Kahn Maker</div>
+            <div class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+              obcaecati praesentium deserunt necessitatibus minima aut.
+            </div>
+            <div class="button">
+              <button class="learnmore">Learn More</button>
+            </div>
+          </div>
+          <div class="boxes1 imagebox picbox2"></div>
+          <div class="boxes1 imagebox picbox3"></div>
+          <div class="boxes1 textbox">
+            <div class="title">New Enemies</div>
+            <div class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+              obcaecati praesentium deserunt necessitatibus minima aut.
+            </div>
+            <div class="button">
+              <button class="learnmore">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

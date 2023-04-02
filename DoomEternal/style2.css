@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100vh;
+  background-image: url("assets/images/header/home-bg.png");
+  background-position: center;
+  background-size: cover;
+  max-width: 525px;
+  margin: 0px auto;
+}
+@media (min-width: 768px) {
+  
+}
